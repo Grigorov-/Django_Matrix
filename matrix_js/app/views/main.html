@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type='text/javascript'  src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js' ></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+  <div id='matrix_wrapper' ng-app="myApp" >
+    <div ng-controller="myCtrl">
+
+      <input type="range" class="slider" id='horizontal-slider' value="2" min="1" max ="10"><br>
+        <input type="range" class="slider" id='vertical-slider' orient="vertical" value="10" min="1" max ="10">
+      <form accept-charset="utf-8">
+
+      <div class="col-xs-1 row-no-padding" ng-repeat="n in range(2) track by $index">
+        <input type="text" class="form-control row-no-padding" placeholder=".col-xs-2" ng-repeat="n in range(7) track by $index" id="matrix_table">
+      </div>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>  
+    </div>   
+  </div>
+  
+</div>
+<script src="../scripts/js/matrix.js"></script>
+<script src="../scripts/app.js"></script>
+<script src="../scripts/controllers/main.js"></script>
+</body>
+</html>
